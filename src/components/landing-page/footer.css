@@ -1,0 +1,124 @@
+footer {
+    background-color:#ededed ;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid red;
+}
+
+.footer-content {
+    display: flex;
+    border: 2px solid brown;
+}
+
+.footer-section-first {
+    width: 20%;
+    margin-left: 10%;
+    border: 2px solid purple;
+}
+
+.footer-newsletter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid yellow;
+}
+
+.newsletter-heading {
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+    border: 2px solid green;
+}
+
+.footer-section-second {
+    width: 20%;
+    /* text-align: left; */
+    margin-left: 10%;
+    border: 2px solid purple;
+}
+
+.categories-heading {
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+    border: 2px solid green;
+}
+
+.footer-categories-center {
+    display: flex;
+    border: 2px solid orange;
+}
+
+.footer-categories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* text-align: left; */
+    width: 50%;
+    border: 2px solid yellow;
+}
+
+.footer-third {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15%;
+    width: 20%;
+    border: 2px solid blue;
+}
+
+.footer-logo {
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    object-fit: contain;
+    border: 2px solid green;
+}
+
+.footer-img {
+    width: 150px;
+    border: 2px solid orange;
+}
+
+.footer-title {
+    border: 2px solid brown;
+}
+
+.footer-title-main {
+    /* color: white; */
+    border: 2px solid purple;
+}
+
+.social-media {
+    display: flex;
+    justify-content: right;
+    border: 2px solid purple;
+}
+
+.social-media img {
+    width: 30px;
+    margin: 10px;
+}
+
+.footer-fourth {
+    margin-top: -55px ;
+    border: 2px solid purple;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+hr {
+    color: black;
+    width: 100%;
+    margin-bottom:70px;
+}
+
+a {
+    color: #626262;
+    text-decoration: none;
+}
