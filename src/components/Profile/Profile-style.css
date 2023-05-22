@@ -1,0 +1,92 @@
+
+.header-profile{
+    /* margin-left: 100px;
+    margin-right: 100px; */
+    height: 7vh;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid red;
+}
+
+.heading-profile {
+    display: flex;
+    width: 20vw;
+    height: 7vh;
+    margin-left: 20px;
+    /* border: 2px solid green; */
+}
+
+.heading-profile-logo {
+    display: flex;
+    justify-content: center;
+    object-fit: contain;
+    width: 30%;
+    height: 7vh;
+    /* border: 2px solid black; */
+}
+
+
+.heading-profile-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    width: 70%;
+    /* border: 2px solid orange; */
+}
+
+.h1-title {
+    font-size: large;
+}
+
+.heading-search-bar {
+    max-width: 380px;
+    width: 100%;
+    background-color: #f0f0f0;
+    margin: 10px 0;
+    height: 5vh;
+    border-radius: 55px;
+    display: grid;
+    grid-template-columns: 15% 85% ;
+    padding: 0 0.4rem;
+    position: relative;
+    border: 2px solid salmon;
+}
+
+.search-logo {
+    text-align: center;
+    height: 45px;
+    border: none;
+    border-radius: 55px;
+}
+
+.heading-search-bar input {
+    background: none;
+    outline: none;
+    border: none;
+    height: 4.5vh;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+    border: 2px solid blue;
+}
+
+.heading-profile-picture {
+    width: 20vw;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 20PX;
+    border: 2px solid blue;
+}
+
+.profile-picture {
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    object-fit: contain;
+    border: 2px solid purple;
+    border-radius: 50px;
+    
+}

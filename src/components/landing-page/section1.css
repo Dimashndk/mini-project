@@ -1,67 +1,105 @@
 * {
-    padding: 0;
+
     font-family: 'icomoon';
 }
 
-header {
-    margin-left: 100px;
-    margin-right: 100px;
-    height: 20vh;
+.header-landing-page {
+   width: 100vw;
+    height: 7vh;
     display: flex;
     justify-content: space-between;
     border: 2px solid red;
 }
 
 hr {
-    margin-top: -10px;
-    margin-bottom: 10vh;
+    /* margin-top: -10px; */
+    /* margin-bottom: 10vh; */
 
 }
 
 .main-heading {
     display: flex;
-    border: 2px solid green;
+    width: 20vw; 
+    height: 7vh;
+    margin-left: 100px;
+    /* margin-left: 20px; */
+    /* border: 2px solid green; */
 }
 
 .main-heading-img {
     display: flex;
     justify-content: center;
     object-fit: contain;
-    border: 2px solid black;
+    width: 30%;
+    height: 7vh;
+    /* border: 2px solid black; */
 }
-
+.logo {
+    height: 7vh;
+}
 
 .main-heading-title {
     display: flex;
-    /* flex-direction: column; */
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     text-align: left;
-    border: 2px solid orange;
+    width: 70%;
+    /* border: 2px solid orange; */
+}
+
+.blog-title {
+    font-size: large;
 }
 
 .main-button {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-around;
     align-items: center; 
+    width: 20vw;
+    margin-right: 100px;
+    /* margin-right: 20px; */
+    /* border: 2px solid green; */
 }
 
-.button-log-in {
+.main-button-login {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-right: 80px;
-    border: 2px solid rebeccapurple;
+    /* border: 2px solid rebeccapurple; */
 }
 
-.log-in {
-    height: 50px;
-    width:  250px;
-    border-radius: 50px;
-    font-size: x-large;
+.button-sign-in {
+    margin-right: 10px;
+}
+
+.login-btn{
+    height: 45px;
+    width:  80px;
+    border-radius: 5px;
+    font-size: medium;
+    font-weight: 600;
     background-color: black;
     color: white;
-    border: none
+    border: white;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background-color: #3e3e3e;
+}
+
+.register-btn {
+    height: 45px;
+    width:  100px;
+    border-radius: 5px;
+    font-size: medium;
+    font-weight: 600;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.register-btn:hover {
+    background-color: #d2d2d2;
 }
 
 .carousel {

@@ -5,7 +5,7 @@ const SignUp = () => {
     const navigate = useNavigate ()
     return (
         <>
-        <body>
+        <section className="body-sign-up">
             <div class="container">
                 <div class="forms-container">
                     <div class="signin-signup">
@@ -43,7 +43,7 @@ const SignUp = () => {
                     </div>
                 </div>
             </div>
-        </body>
+        </section>
        
         </>
     )

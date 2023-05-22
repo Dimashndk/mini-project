@@ -1,39 +1,54 @@
-import React from 'react'
+import React, { useState }  from 'react'
 import { useNavigate } from 'react-router-dom'
  
+import Popup from '../Login/Login-Popup'
+
 import Fb from '../../assets/facebook.png'
 import Ig from '../../assets/instagram.png'
 import Twitter from '../../assets/twitter.png'
 import Linkedin from '../../assets/linkedin.png'
 import logo from '../../assets/logo.png'
 
-
 import './section1.css'
 import './section2.css'
 import './footer.css'
 
 function WireFrame ()  {
+    const [buttonPopup, setButtonPopup] = useState (false);
     const navigate = useNavigate ()
     
     return (
         <>
-        <header>
+        <header className='header-landing-page'>
             <div className="main-heading">
                 <div className='main-heading-img'>
                     <img className='logo' src={logo} alt=''></img>
                 </div>
                 <div className='main-heading-title'>
-                    <h1>Blog <br/>Banteng <br/>Merah</h1>
+                    <h1 className='blog-title'>
+                            Blog 
+                        <br/>
+                            Banteng 
+                        <br/>
+                            Merah
+                    </h1>
                 </div>
             </div>
             <div className='main-button'> 
-                <div className='button-log-in'>
-                    <button className="log-in" onClick={() => navigate('/sign-in-page')}>BE OUR GUEST</button>
+                <div className='main-button-login'>
+                    <div className='button-sign-in'>
+                        <button className="login-btn" onClick={() => setButtonPopup(true)}>Login</button>
+                    </div>
+                    <div className='button-sign-up'>
+                        <button className="register-btn" onClick={() => navigate('/sign-up-page')}>Register</button>
+                    </div>
                 </div>
             </div>  
         </header>
+        <Popup trigger= {buttonPopup} setTrigger={setButtonPopup}>
+        </Popup>
             <hr />
-        <body>
+        <section className='body-landing-page'>
             <section className="carousel">
                     <img className='carousel-img' src='https://imgsrv2.voi.id/gJUap17XlZcLRX4mH2fLkH0RO8ugt3lQqF1qSdFAdU0/auto/1200/675/sm/1/bG9jYWw6Ly8vcHVibGlzaGVycy8zODYxNi8yMDIxMDMxMjIwMzYtbWFpbi5qcGc.jpg' alt='' />
                 <div className='carousel-content'>
@@ -48,8 +63,11 @@ function WireFrame ()  {
                         <h4>Author</h4>
                         <p>date <span>read</span> <span>⭐️</span></p>
                     </div>
-                    //  span read(notif buat sudah di baca/belum) & ⭐️ untuk favorite 
-                </div>
+                    
+                    {
+                        //  span read(notif buat sudah di baca/belum) & ⭐️ untuk favorite 
+                    }
+                        </div>
             </section>
             <section className='mini-article'>
                 <div className="popular-post-section">
@@ -152,7 +170,7 @@ function WireFrame ()  {
                     </div>
                 </div>
             </section>
-        </body>
+        </section>
         <footer>
             <div className='footer-section-padding'>
                 <div className='footer-content'>
