@@ -1,0 +1,26 @@
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50vw;
+    height: 100vh;
+    margin-left: 15vw;
+    margin-top: 7vh;
+    background-color: gray;
+    border: 1px solid gray;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.container-inner {
+    position: relative;
+    padding: 32px;
+    width: 100%;
+    max-width: 400px;
+    height: 600px;
+    background-color: #fff;
+    border-radius: 5px;
+}

@@ -1,0 +1,224 @@
+.popup-register {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-register-inner {
+    position: relative;
+    padding: 32px;
+    width: 100%;
+    max-width: 400px;
+    height: 600px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.register-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    /* border: 2px solid purple; */
+}
+
+.register-section-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 30px;
+    /* border: 2px solid blue; */
+}
+
+.register-form-signin {
+    margin-left: 10px;
+    /* margin-bottom: 5px; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    /* border: 2px solid green; */
+}
+
+.register-form-title {
+    display: flex;
+    justify-content: center;
+    /* align-items: flex-start; */
+    height: 35px;
+    /* margin-top: 5px; */
+    /* border: 2px solid blue; */
+    
+}
+
+.register-title {
+    margin: 0;
+    /* text-align: center; */
+    font-size: x-large;
+}
+
+.p-login {
+    margin: 0;
+}
+
+.span-to-login {
+    height: 25px;
+    text-decoration: underline;
+    cursor: pointer;
+    /* border: 2px solid black; */
+
+}
+
+.close-btn {
+    height: 25px;
+    margin-right: 20px;
+    /* border: 2px solid yellow; */
+}
+
+.register-section-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.register-input-label {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.register-label {
+    margin-bottom: -10px;
+    /* border: 2px solid purple; */
+}
+
+.register-input-field {
+    max-width: 380px;
+    width: 380px;
+    background-color: #f0f0f0;
+    margin: 10px 0;
+    height: 55px;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 100% ;
+    /* padding: 0 0.4rem; */
+    position: relative;
+    /* border: 2px solid salmon; */
+}
+
+.register-input-field input {
+    background: none;
+    outline: none;
+    border: none;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+    /* border: 2px solid blue; */
+}
+
+.register-input-field input::placeholder {
+    color: #aaa;
+    font-weight: 500;
+}
+
+.register-form-btn{
+    cursor: pointer;
+}
+
+.register-section-3 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.form-register-btn {
+    width: 380px;
+    background-color: #000;
+    border: none;
+    outline: none;
+    height: 49px;
+    border-radius: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.form-register-btn:hover {
+    background-color: #3e3e3e;
+}
+
+.btn-register {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.btn-register-google {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;background-color: white;
+    /* flex-direction: column; */
+
+
+    border:2px solid gray;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.google-img {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 35%;
+    height: 100%;
+    /* border: 2px solid blue; */
+}
+
+.apa{
+    height: 50px;
+    /* border: 2px solid violet; */
+}
+.google {
+    height: 50px;
+}
+
+.btn-title {
+    width: 65%;
+    /* background-color: white; */
+    /* border: 2px solid black; */
+}
+
+.btn-register-google:hover{
+    background-color: #d2d2d2;
+}
+
+.aja {
+    width: 100%;
+    /* border: 2px solid green; */
+}
+
+.btn-google-title {
+    line-height: 1;
+    font-weight: 600;
+    width: 100%;
+    /* font-size: 1.1rem;border: 2px solid rebeccapurple; */
+
+}
+

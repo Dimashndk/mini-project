@@ -5,7 +5,12 @@
     height: 7vh;
     display: flex;
     justify-content: space-between;
-    border: 2px solid red;
+    /* border: 2px solid red; */
+    background-color: white;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 2;
+    z-index: 2;
 }
 
 .heading-profile {
@@ -50,7 +55,7 @@
     grid-template-columns: 15% 85% ;
     padding: 0 0.4rem;
     position: relative;
-    border: 2px solid salmon;
+    /* border: 2px solid salmon; */
 }
 
 .search-logo {
@@ -69,7 +74,7 @@
     font-weight: 600;
     font-size: 1.1rem;
     color: #333;
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
 }
 
 .heading-profile-picture {
@@ -78,15 +83,52 @@
     justify-content: flex-end;
     align-items: center;
     margin-right: 20PX;
-    border: 2px solid blue;
+    position: relative;
+    /* border: 2px solid blue; */
 }
 
 .profile-picture {
     display: flex;
-    height: 50px;
+    height: 35px;
     justify-content: center;
     object-fit: contain;
     border: 2px solid purple;
     border-radius: 50px;
-    
+}
+
+.profile-btn-dropdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.profile-picture-title {
+    margin-left: 10px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.drop-logo {
+    height: 20px;
+    cursor: pointer;
+}
+
+.heading-menu {
+    background-color: white;
+    padding: 4px;
+    width: 100px;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+    /* position: absolute; */
+    /* margin-left: 100px; */
+    margin-top: 24px;
+    border: 2px solid red;
+}
+
+.heading-drop-down-menu {
+    padding: 2px;
+    font-size: 18px;
+    line-height: 28px;
+    cursor: pointer
+    ;
 }

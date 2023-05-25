@@ -1,17 +1,43 @@
+import { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-import logo from '../../assets/logo.png'
+import ProfileDropMenu from '../Dropdown-Menu/Profile-Menu'
+import Post from './Post/Post'
+
 import './Profile-style.css'
 import'./Side-Navbar-style.css'
 
+import logo from '../../assets/logo.png'
 import user from '../../assets/user-pic.jpeg'
-import search from '../../assets/searchlogo.png'
+import search from '../../assets/icons8-search-50.png'
 import changepic from '../../assets/camera.png'
+import droplogo from '../../assets/icons8-dropdown-50.png'
+import Favorite from './Favorite/Favorite'
 
 const Profile = () => {
 
+    const [open, setOpen] = useState(false);
+    const [openPost, setOpenPost] = useState (false)
+    const [openFavorite, setOpenFavorite] = useState (false)
+    
     const navigate = useNavigate ()
-    const Menus = ["Favorite", "Edit Profile", "Logout"];
+
+    let menuRef = useRef ();
+    
+// effect "close outside popup"
+    useEffect (() => {
+        let handler = (e) => {
+            if (!menuRef.current.contains (e.target)){
+                setOpen(false);
+                console.log (menuRef.current);
+            }
+        };
+        document.addEventListener ("mousedown", handler);  
+
+        return () => {
+            document.removeEventListener('mousedown', handler)
+        }
+    });
 
     return (
         <>
@@ -36,15 +62,14 @@ const Profile = () => {
             </div>
             <div className='heading-profile-picture'>  
                 <img className='profile-picture' src={user} alt='' />
-                <h2>username</h2> 
-                <div className=''>
-                    <ul>
-                        {
-                            Menus.map ((menu) =>(
-                                <li key={menu}>{menu}</li>
-                            ))
-                        }
-                    </ul>
+                <div 
+                ref={menuRef}
+                className='profile-btn-dropdown' 
+                onClick={() => {setOpen (!open)}}>
+                    <h2 className='profile-picture-title'>FirstName</h2> 
+                    <img className='drop-logo' src={droplogo} alt=''  />
+                    <ProfileDropMenu  trigger = {open} setTrigger = {setOpen}>
+                    </ProfileDropMenu>
                 </div>
             </div>
         </header>
@@ -54,13 +79,19 @@ const Profile = () => {
                 <div className='side-navbar-profile-picture'>
                     <img className='navbar-profile-img' src={user} alt='' />
                     <div className='position-change-pic-logo'>
-                    <div className='change-pic-logo'>
-                        <img className='change-pic-img' src={changepic} alt='' />
-                    </div>
+                        <div className='change-pic-logo'>
+                            <img className='change-pic-img' src={changepic} alt='' />
+                        </div>
                     </div>
                 </div> 
-                <h2>username</h2>
-                <p>"emailUser"</p>
+                <div className='navbar-user'>
+                    <div className='navbar-user-title'>
+                        <h2 className='navbar-username'>FullName</h2>
+                    </div>
+                    <div className='navbar-user-email'>
+                        <p className='navbar-email'>"emailUser"</p>
+                    </div>    
+                </div>    
             </div>
         </div>
             <hr className='hr-profile-menu' />
@@ -68,12 +99,17 @@ const Profile = () => {
             <div className='side-navbar-options'>
                 <p>DASHBOARD</p>    
                     <a className='navbar-menu' href='home'>Home</a>
-                    <a className='navbar-menu' href='/'>Posts</a>
-                    <a className='navbar-menu' href='/'>Favorite Blogs</a>
+                    <p className='navbar-menu'  onClick={() => setOpenPost (!openPost)}>Posts</p>
+                    <p className='navbar-menu' onClick={() => setOpenFavorite (!openFavorite)}>Favorite Blogs</p>
                     <a className='navbar-menu' href='/'>Settings</a>
                 <p>PROFILE</p>
                     <a className='navbar-menu' href='/'>Edit Profile</a>
-            </div>
+                    <Post trigger = {openPost} setTrigger = {setOpenPost} >
+                    ghjhj
+                    </Post>            
+                    <Favorite trigger = {openFavorite} setTrigger ={setOpenFavorite}>
+                    </Favorite>
+                </div>
         </div>
             
         </section>
